@@ -131,7 +131,7 @@ export default function HeroSection() {
                     </svg>
                   </div>
                   <img
-                    src="https://api.builder.io/api/v1/image/assets/TEMP/3496bc3844b95e2673a272e63a14f4427a21f164?width=532"
+                    src="AnhLong.png"
                     alt="Lê Bảo Long"
                     className="h-64 sm:h-80 lg:h-[343px] w-auto object-cover rounded-lg relative z-10"
                   />
@@ -167,7 +167,7 @@ export default function HeroSection() {
                     </svg>
                   </div>
                   <img
-                    src="https://api.builder.io/api/v1/image/assets/TEMP/b516d0e6076e1a277fd0f7b4e04d586c4bd53da1?width=502"
+                    src="/AnhTuan.png"
                     alt="Nguyễn Lưu Anh Tuấn"
                     className="h-64 sm:h-80 lg:h-[339px] w-auto object-cover rounded-lg relative z-10"
                   />

@@ -55,7 +55,7 @@ export default function ValuesSection() {
         >
           <motion.div className="col-span-1 flex flex-col gap-4" variants={itemVariants}>
             <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/f64c6494aa0a41653aeff83c88032c70486f9273?width=766"
+              src="/Nambat.png"
               alt="Value 1"
               className="w-full h-auto rounded-lg"
             />
@@ -74,12 +74,12 @@ export default function ValuesSection() {
 
                 <div className="flex items-end justify-center">
                   <img
-                    src="https://api.builder.io/api/v1/image/assets/TEMP/89f7100def3177e1e51e09824338e1eb2629edca?width=492"
+                    src="/AnhLong.png"
                     alt="Expert 1"
                     className="h-64 sm:h-80 w-auto object-cover rounded-lg relative z-10"
                   />
                   <img
-                    src="https://api.builder.io/api/v1/image/assets/TEMP/8bb63f46c03b33e74b2f45dfe7ae028513366b34?width=478"
+                    src="/AnhTuan.png"
                     alt="Expert 2"
                     className="h-64 sm:h-80 w-auto object-cover rounded-lg -ml-12 sm:-ml-16"
                   />
@@ -89,11 +89,11 @@ export default function ValuesSection() {
           </motion.div>
 
           <motion.div className="lg:col-span-1 flex flex-col gap-6" variants={itemVariants}>
-            <div className="p-6 lg:p-8 rounded-lg border-2 sm:border-3 border-brand-teal bg-white flex-1 flex">
-              <h3 className="text-xl sm:text-2xl lg:text-[26px] font-semibold text-black text-center mb-4 leading-tight">
-                Đón đầu cơ hội mua BĐS thông minh dựa trên chu kỳ kinh tế
-              </h3>
-            </div>
+            <img
+              src="/Dondau.png"
+              alt="Đón đầu cơ hội mua BĐS thông minh"
+              className="w-full h-full object-cover rounded-lg border-2 sm:border-3 border-brand-teal"
+            />
           </motion.div>
 
           <motion.div className="lg:col-span-1 flex flex-col gap-6" variants={itemVariants}>
@@ -129,7 +129,7 @@ export default function ValuesSection() {
 
               <div className="mt-6">
                 <img
-                  src="/gift-cards.png"
+                  src="/Nhanboqua.png"
                   alt="Quà tặng: GÓC NHÌN CHUYÊN GIA 2026 và X2 TÀI SẢN"
                   className="w-full h-auto rounded-lg"
                 />
