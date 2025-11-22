@@ -5,10 +5,30 @@ import SuccessPopup from "./SuccessPopup";
 
 export default function RegistrationSection() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    service: "Vé thường (1 buổi)",
+  });
+
+  const handleFormSubmit = () => {
+    setSubmitted(true);
     setIsPopupOpen(true);
+  };
+
+  const handleIframeLoad = () => {
+    if (submitted) {
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        service: "Vé thường (1 buổi)",
+      });
+      setSubmitted(false);
+    }
   };
 
   return (
@@ -21,15 +41,30 @@ export default function RegistrationSection() {
           transition={{ duration: 0.6 }}
         >
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
-            <form onSubmit={handleSubmit} className="space-y-6 lg:col-span-2">
+            <iframe
+              name="hidden_iframe"
+              id="hidden_iframe"
+              style={{ display: "none" }}
+              onLoad={handleIframeLoad}
+            ></iframe>
+            <form
+              action="https://docs.google.com/forms/d/e/1FAIpQLSdVDJn-ViLZ7QhFV9856_c0lJqHogW2sWRk6PmKvDroV6SnVA/formResponse"
+              method="POST"
+              target="hidden_iframe"
+              onSubmit={handleFormSubmit}
+              className="space-y-6 lg:col-span-2"
+            >
               <div>
                 <label className="block text-[#333] text-base font-semibold mb-2">
                   Họ tên*
                 </label>
                 <input
                   type="text"
+                  name="entry.1531178908"
                   placeholder="Nhập họ tên"
                   required
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full px-4 py-3 rounded-md border border-brand-teal bg-[#FAFAFA] text-[15px] font-medium text-[#333] placeholder:text-[#B0B0B0] focus:outline-none focus:ring-2 focus:ring-brand-teal"
                 />
               </div>
@@ -40,8 +75,13 @@ export default function RegistrationSection() {
                 </label>
                 <input
                   type="email"
+                  name="entry.1887976924"
                   placeholder="Nhập email"
                   required
+                  pattern=".*@.*"
+                  title="Email phải chứa ký tự @"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full px-4 py-3 rounded-md border border-brand-teal bg-[#FAFAFA] text-[15px] font-medium text-[#333] placeholder:text-[#B0B0B0] focus:outline-none focus:ring-2 focus:ring-brand-teal"
                 />
               </div>
@@ -52,9 +92,15 @@ export default function RegistrationSection() {
                 </label>
                 <input
                   type="tel"
+                  name="entry.1180298465"
                   placeholder="Nhập số điện thoại"
                   required
                   className="w-full px-4 py-3 rounded-md border border-brand-teal bg-[#FAFAFA] text-[15px] font-medium text-[#333] placeholder:text-[#B0B0B0] focus:outline-none focus:ring-2 focus:ring-brand-teal"
+                  pattern="0[0-9]{9}"
+                  title="Số điện thoại phải có 10 chữ số và bắt đầu bằng số 0."
+                  maxLength={10}
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 />
               </div>
 
@@ -63,7 +109,13 @@ export default function RegistrationSection() {
                   Gói đăng ký bạn quan tâm*
                 </label>
                 <div className="relative">
-                  <select className="w-full px-4 py-3 rounded-md border border-brand-teal bg-[#FAFAFA] text-[15px] font-medium text-[#333] appearance-none focus:outline-none focus:ring-2 focus:ring-brand-teal">
+                  <select
+                    name="entry.2138638337"
+                    value={formData.service}
+                    onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                    required
+                    className="w-full px-4 py-3 rounded-md border border-brand-teal bg-[#FAFAFA] text-[15px] font-medium text-[#333] appearance-none focus:outline-none focus:ring-2 focus:ring-brand-teal"
+                  >
                     <option>Vé thường</option>
                     <option>Vé nâng cao</option>
                     <option>Vé VVIP</option>
