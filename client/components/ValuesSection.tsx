@@ -7,6 +7,7 @@ export default function ValuesSection() {
       registerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -96,25 +97,29 @@ export default function ValuesSection() {
           </motion.div>
 
           <motion.div className="lg:col-span-1 flex flex-col gap-6" variants={itemVariants}>
-            <div className="p-6 lg:p-8 rounded-lg border-2 sm:border-3 border-brand-teal bg-gradient-to-br from-brand-cyan via-brand-cyan-light to-brand-cyan">
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/8da805fe939a6014e85a769e819258a38acd0e32?width=126"
-                  alt="Star icon"
-                  className="w-12 h-12 sm:w-16 sm:h-16"
-                />
-                <h3 className="text-3xl sm:text-4xl lg:text-[42px] font-semibold text-brand-teal">
+            <div className="p-6 lg:p-8 rounded-lg border-2 sm:border-3 border-brand-teal bg-gradient-to-br from-brand-cyan via-brand-cyan-light to-brand-cyan flex-1 flex flex-col items-center justify-center text-center">
+              {/* Badge with icon and text */}
+              {/* Main title */}
+              <h4 className="text-xl sm:text-2xl lg:text-[24px] font-semibold text-white mb-3 leading-tight">
+                Tìm ra phương pháp vay mua BĐS tối ưu và an toàn
+              </h4>
+
+              {/* Subtitle */}
+              <p className="text-base sm:text-lg lg:text-[20px] font-light text-whitet">
+                gồm vay mua để ở và để đầu tư
+              </p>
+              <div className="inline-flex items-center gap-3 px-6 py-3 mt-5 mb-6 rounded-full bg-white">
+                <div className="w-12 h-12 rounded-full bg-brand-teal flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="white" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-brand-teal">
                   ĐÒN BẨY
                 </h3>
               </div>
-              <h4 className="text-xl sm:text-2xl lg:text-[26px] font-semibold text-white text-center leading-tight">
-                Tìm ra phương pháp vay mua BĐS tối ưu và an toàn
-              </h4>
-              <p className="text-lg sm:text-xl lg:text-[22px] font-light text-white text-center mt-2">
-                gồm vay mua để ở và để đầu tư
-              </p>
             </div>
-            <div className="p-6 lg:p-8 rounded-lg border-2 sm:border-3 border-brand-teal bg-gradient-to-br from-white to-brand-cyan-pale">
+            <div className="p-6 lg:p-8 rounded-lg border-2 sm:border-3 border-brand-teal bg-gradient-to-br from-white to-brand-cyan-pale flex-1">
               <h3 className="text-xl sm:text-2xl lg:text-[25px] font-semibold text-black text-center mb-2 leading-tight">
                 Nhận bộ quà đặc biệt & tài liệu chuyên sâu từ
               </h3>
@@ -122,32 +127,12 @@ export default function ValuesSection() {
                 chuyên gia bất động sản
               </p>
 
-              <div className="mt-6 space-y-4">
-                <div className="flex items-center justify-between bg-gradient-to-r from-brand-teal to-brand-teal-dark text-white rounded-lg p-4 shadow-md">
-                  <div className="flex-1">
-                    <p className="text-xs sm:text-sm font-semibold text-white/80 mb-1">
-                      GÓC NHÌN CHUYÊN GIA
-                    </p>
-                    <p className="text-base sm:text-lg font-medium">2026</p>
-                  </div>
-                </div>
-
-                <div className="bg-white rounded-lg p-4 shadow-md">
-                  <img
-                    src="https://api.builder.io/api/v1/image/assets/TEMP/29f8efda0b7481c199341ac0183ee4e758b05978?width=366"
-                    alt="Gift preview"
-                    className="w-full h-auto"
-                  />
-                </div>
-
-                <div className="bg-gradient-to-r from-brand-teal to-brand-teal-dark text-white rounded-lg p-4 shadow-md">
-                  <p className="text-base sm:text-lg font-bold mb-1">
-                    X2 TÀI SẢN
-                  </p>
-                  <p className="text-sm sm:text-[15px] font-medium">
-                    trong năm tiếp theo
-                  </p>
-                </div>
+              <div className="mt-6">
+                <img
+                  src="/gift-cards.png"
+                  alt="Quà tặng: GÓC NHÌN CHUYÊN GIA 2026 và X2 TÀI SẢN"
+                  className="w-full h-auto rounded-lg"
+                />
               </div>
             </div>
           </motion.div>
