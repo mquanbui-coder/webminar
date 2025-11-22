@@ -26,7 +26,8 @@ export default function PricingSection() {
         {
           text: "1 buổi tư vấn tổng quan",
           bold: true,
-          append: " với Finful giúp xác định hiện trạng tài chính và lập kế hoạch tích luỹ mua nhà",
+          append:
+            " với Finful giúp xác định hiện trạng tài chính và lập kế hoạch tích luỹ mua nhà",
         },
       ],
       buttonText: "Đăng ký",

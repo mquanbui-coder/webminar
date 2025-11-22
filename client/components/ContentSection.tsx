@@ -46,7 +46,13 @@ export default function ContentSection() {
             strokeWidth="70"
           />
           <defs>
-            <linearGradient id="gradient1" x1="-19.7112" y1="24.4835" x2="509" y2="445.335">
+            <linearGradient
+              id="gradient1"
+              x1="-19.7112"
+              y1="24.4835"
+              x2="509"
+              y2="445.335"
+            >
               <stop stopColor="#D9D9D9" stopOpacity="0.3" />
               <stop offset="1" stopColor="white" stopOpacity="0.1" />
             </linearGradient>

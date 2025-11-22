@@ -13,7 +13,7 @@ export default function ProblemsSection() {
       icon: "https://api.builder.io/api/v1/image/assets/TEMP/ef393a36f81129f52cc5ed860260d238a639d569?width=108",
     },
     {
-      title: "Mắc kẹt giữa \"Chờ\" và \"Vội\"",
+      title: 'Mắc kẹt giữa "Chờ" và "Vội"',
       description:
         "Bạn không biết nên xuống tiền ngay để đón đầu chu kỳ mới, hay nên chờ đợi để tránh rủi ro kinh tế bất ổn.",
       icon: "https://api.builder.io/api/v1/image/assets/TEMP/028ccd1fcbe6786e9a0787ff7732418fa5e6a85e?width=108",
